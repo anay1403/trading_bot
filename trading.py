@@ -31,7 +31,7 @@ def place_order(symbol, side, order_type, quantity, price=None):
             raise ValueError("Invalid order type. Use MARKET or LIMIT.")
 
         logger.info(f"Order response: {order}")
-        print("\n✅ Order placed successfully!")
+        print("\nOrder placed successfully!")
         print(f"Order ID: {order['orderId']}")
         print(f"Status: {order['status']}")
         print(f"Executed Qty: {order['executedQty']}")
@@ -40,7 +40,7 @@ def place_order(symbol, side, order_type, quantity, price=None):
 
     except BinanceAPIException as e:
         logger.error(f"API Error: {e}")
-        print(f"❌ API Error: {e}")
+        print(f"API Error: {e}")
     except Exception as e:
         logger.error(f"Unexpected Error: {e}")
-        print(f"❌ Unexpected Error: {e}")
+        print(f"Unexpected Error: {e}")
