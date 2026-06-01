@@ -10,20 +10,25 @@ Supports BUY and SELL, CLI input, structured code, logging, and error handling.
    git clone https://github.com/anay1403/trading_bot.git
    cd trading_bot
 2. Create a virtual environment:
+   ```bash
     python -m venv venv
     source venv/bin/activate   # Mac/Linux
     venv\Scripts\activate      # Windows
-3. Install Dependencies:
+4. Install Dependencies:
+   ```bash
     pip install -r requirements.txt
 
-4. Add your API Key + Secret in config.py.
+6. Add your API Key + Secret in config.py.
 
 HOW TO RUN:
 Market Order:
-python bot.py --symbol BTCUSDT --side BUY --type MARKET --quantity 0.001
+   ```bash
+   python bot.py --symbol BTCUSDT --side BUY --type MARKET --quantity 0.001
+   ```
 Limit Order:
+```bash
 python bot.py --symbol BTCUSDT --side SELL --type LIMIT --quantity 0.001 --price 70000
-
+```
 Assumptions:
 1. Using Binance Futures Testnet (https://testnet.binancefuture.com).
 2. API keys are valid and have Futures permissions.
@@ -38,6 +43,7 @@ Logs:
 All API requests and responses are logged to trading.log.
 
 Example Market Order:
+```bash
 📋 Order Request Summary:
 Symbol: BTCUSDT
 Side: BUY
@@ -50,8 +56,9 @@ Order ID: 13690487596
 Status: NEW
 Executed Qty: 0.0000
 Avg Price: 0.00
-
+```
 Example Limiy Order:
+``` bash
 📋 Order Request Summary:
 Symbol: BTCUSDT
 Side: SELL
@@ -60,6 +67,7 @@ Quantity: 0.001
 Price: 70000
 2026-06-01 16:55:10,421 - INFO - Placing SELL LIMIT order: 0.001 BTCUSDT at 70000
 2026-06-01 16:55:10,890 - INFO - Order response: {'orderId': 13690512345, 'symbol': 'BTCUSDT', 'status': 'NEW', ... }
+```
 ✅ Order placed successfully!
 Order ID: 13690512345
 Status: NEW
