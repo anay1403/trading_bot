@@ -44,14 +44,14 @@ All API requests and responses are logged to trading.log.
 
 Example Market Order:
 ```bash
-📋 Order Request Summary:
+Order Request Summary:
 Symbol: BTCUSDT
 Side: BUY
 Type: MARKET
 Quantity: 0.001
 2026-06-01 16:51:02,135 - INFO - Placing BUY MARKET order: 0.001 BTCUSDT at MARKET
 2026-06-01 16:51:02,628 - INFO - Order response: {'orderId': 13690487596, 'symbol': 'BTCUSDT', 'status': 'NEW', ... }
-✅ Order placed successfully!
+Order placed successfully!
 Order ID: 13690487596
 Status: NEW
 Executed Qty: 0.0000
@@ -59,7 +59,7 @@ Avg Price: 0.00
 ```
 Example Limiy Order:
 ``` bash
-📋 Order Request Summary:
+Order Request Summary:
 Symbol: BTCUSDT
 Side: SELL
 Type: LIMIT
@@ -67,8 +67,7 @@ Quantity: 0.001
 Price: 70000
 2026-06-01 16:55:10,421 - INFO - Placing SELL LIMIT order: 0.001 BTCUSDT at 70000
 2026-06-01 16:55:10,890 - INFO - Order response: {'orderId': 13690512345, 'symbol': 'BTCUSDT', 'status': 'NEW', ... }
-
-✅ Order placed successfully!
+Order placed successfully!
 Order ID: 13690512345
 Status: NEW
 Executed Qty: 0.0000
