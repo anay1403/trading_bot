@@ -11,7 +11,7 @@ def main():
 
     args = parser.parse_args()
 
-    print("\n📋 Order Request Summary:")
+    print("\nOrder Request Summary:")
     print(f"Symbol: {args.symbol}")
     print(f"Side: {args.side}")
     print(f"Type: {args.type}")
